@@ -58,6 +58,11 @@ router.get('/hello/:name', function(req, res){
     res.send('Hello there, ' + req.params.name + '!');
 });
 
+// custom catch all
+router.get('*', function(req,res){
+    res.send('Four uh-oh Four.');
+});
+
 
 //apply the routes to our application
 app.use('/', router);
