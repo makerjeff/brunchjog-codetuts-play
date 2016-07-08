@@ -43,17 +43,17 @@ router.param('name', function(req, res, next, name){
 
 });
 
-//home page route
+//home page route (EXAMPLE)
 router.get('/', function(req, res){
     res.send('I\'m on the home page!');
 });
 
-//about page route
+//about page route (EXAMPLE)
 router.get('/about', function(req,res){
     res.send('I\'m at the about page!');
 });
 
-//route with parameters
+//route with parameters (EXAMPLE)
 router.get('/hello/:name', function(req, res){
     res.send('Hello there, ' + req.params.name + '!');
 });
@@ -62,7 +62,7 @@ router.get('/hello/:name', function(req, res){
 //apply the routes to our application
 app.use('/', router);
 
-// MULTIPLE ACTIONS WITH THE SAME ROUTE
+// MULTIPLE ACTIONS WITH THE SAME ROUTE (EXAMPLE)
 // ======================================
 app.route('/login')
 // show the form
@@ -73,7 +73,7 @@ app.route('/login')
 //process the form
     .post(function(req, res){
         console.log('processing');
-        res.send('processing login form! POST ' + Date());
+        res.send('processing login form! POST ' + new Date());
     });
 
 
