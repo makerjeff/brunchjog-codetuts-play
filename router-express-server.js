@@ -29,6 +29,12 @@ router.use(function(req, res, next){
     next();
 });
 
+//custom static routes
+router.use(express.static(__dirname + '/public/'));
+
+//app.use(express.static(__dirname + '/public/'));
+
+
 //Route middleware to validate :name, using Express.param().
 router.param('name', function(req, res, next, name){
     //do some validation here

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Bugs</title>
+
+    <!-- MODULES (eventually use a loader system) -->
+    <script src="./js/create_random_string.js"></script>
+    <script src="./js/Bug.js"></script>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .bug {
+            position: absolute;
+            height: 32px;
+            width: 32px;
+            background: url(img/bug_sequence_32.png) no-repeat 0px 0px;
+            background-position: 0px 0px;
+
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>JS Bugs</h1>
+    <div class="bug"></div>
+</div>
+
+<script>
+    var jimmy = new Bug(32, 52, 1, 100);
+    var ron = new Bug(55,33,1,100);
+    var bradley = new Bug(100,53,1,100);
+
+    jimmy.spawn();
+    ron.spawn();
+    bradley.spawn();
+
+
+
+</script>
+
+</body>
+</html>

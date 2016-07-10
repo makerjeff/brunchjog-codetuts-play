@@ -3,6 +3,10 @@
 ##Instructions
 
 	ENV_PORT=3000 node <server filename> 
+	
+##Notes
+- added Bugs experiments
+- added create random string for IDs
 
 ##Reference
 - [Using the new Router in Express 4](https://scotch.io/tutorials/learn-to-use-the-new-router-in-expressjs-4#express-router)
