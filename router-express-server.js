@@ -12,6 +12,8 @@ var port = process.env.PORT || 8080;
 // ROUTES
 // ======================================
 
+var routes = require('./routes/mongoose-routes');
+
 // sample Express 3.0 kind of route.
 app.get('/sample', function(req,res){
     res.send('This sample is working.');
@@ -32,7 +34,8 @@ router.use(function(req, res, next){
 //custom static routes
 router.use(express.static(__dirname + '/public/'));
 
-//app.use(express.static(__dirname + '/public/'));
+//custom external routes
+app.use('/routes', routes);
 
 
 //Route middleware to validate :name, using Express.param().
